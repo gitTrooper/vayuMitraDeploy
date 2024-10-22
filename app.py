@@ -10,7 +10,7 @@ model = pickle.load(open('aqi_model.pkl', 'rb'))
 def predict():
     data = request.get_json()
     # Create a list of input features
-    input_features = [data['CO'], data['NO2']/1000, data['O3']/1000, data['SO2']/1000, data['PM2.5']/1000, data['PM10']/1000]
+    input_features = [data['CO'], data['NO2']/1000, data['O3']/1000, data['SO2']/1000, data['PM2.5']/1000, data['PM10']/1000, data['NH3']/1000]
 
     # Make predictions
     prediction = model.predict([input_features])
