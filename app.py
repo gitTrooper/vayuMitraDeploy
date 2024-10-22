@@ -4,7 +4,7 @@ import pickle
 app = Flask(__name__)
 
 # Load the trained model
-model = pickle.load(open('aqi_model .pkl', 'rb'))
+model = pickle.load(open('aqi_model.pkl', 'rb'))
 
 @app.route('/predict', methods=['POST'])
 def predict():
